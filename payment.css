@@ -1,0 +1,97 @@
+/* General Styles for Payment Page */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+header img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    margin-top: 10px;
+}
+
+main {
+    padding: 40px 20px;
+}
+
+.payment-section {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.payment-section h2 {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 30px;
+}
+
+.payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input {
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.form-group input:focus {
+    border-color: #ff5733;
+    outline: none;
+}
+
+.btn {
+    background-color: #ff5733;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff7851;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #222;
+    color: white;
+}

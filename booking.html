@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Movie - Movie Mania</title>
+    <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+    <div class="booking-container">
+        <div class="booking-box">
+            <h2>Book Your Movie</h2>
+            <p>Fill in the details below to confirm your tickets</p>
+            <form class="booking-form" action="payment.html" method="POST">
+                <div class="form-group">
+                    <label for="movie">Select Movie</label>
+                    <select id="movie" name="movie" required>
+                        <option value="" disabled selected>Select a movie</option>
+                        <option value="Pushpa The Rule">Pushpa The Rule</option>
+                        <option value="Marco">Marco</option>
+                        <option value="Moana 2">Moana 2</option>
+                        <option value="Miss you">Miss You</option>
+                        <option value="Solo Leveling ReAwakening">Solo Leveling ReAwakening</option>
+                        <option value="Viduthalai 2">Viduthalai 2</option>
+                        <option value="Mufasa The lion King">Mufasa The lion King</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date">Select Date</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Select Time</label>
+                    <select id="time" name="time" required>
+                        <option value="" disabled selected>Select a time</option>
+                        <option value="10:00 AM">10:00 AM</option>
+                        <option value="1:00 PM">1:00 PM</option>
+                        <option value="4:00 PM">4:00 PM</option>
+                        <option value="7:00 PM">7:00 PM</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="seats">Number of Seats</label>
+                    <input type="number" id="seats" name="seats" placeholder="Enter number of seats" min="1" max="10" required>
+                </div>
+                <button type="submit" class="btn">Proceed to Payment</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
