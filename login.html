@@ -11,7 +11,7 @@
         <div class="login-box">
             <h2>Welcome Back!</h2>
             <p>Please log in to continue</p>
-            <form class="login-form" action="dashboard.html" method="POST">
+            <form id="loginForm">
                 <div class="form-group">
                     <label for="username">Username</label>
                     <input type="text" id="username" name="username" placeholder="Enter your username" required>
@@ -32,5 +32,38 @@
             </form>
         </div>
     </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", async (e) => {
+            e.preventDefault(); // Prevent default form submission
+
+            // Collect form data
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // Send data to the API
+            try {
+                const response = await fetch("https://movie-mania-be.vercel.app/login", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({ email: username, password }),
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    alert(result.message);
+                    window.location.href = "movies.html"; // Redirect to the dashboard
+                } else {
+                    alert(result.error || "Invalid login credentials. Please try again.");
+                }
+            } catch (error) {
+                console.error("Error:", error);
+                alert("Unable to connect to the server. Please try again later.");
+            }
+        });
+    </script>
 </body>
 </html>
